@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Learning TypeScript
 
 This repository contains my practice exercises and projects as I learn **TypeScript**.  
@@ -32,3 +33,6 @@ It also provides features like IntelliSense and better error detection during de
 ---
 
 This repo shows my journey of learning and practicing TypeScript.
+=======
+# frontend-javascript
+>>>>>>> 2933fdba5b6b9d10f073b631fd4ac56fa7405131
