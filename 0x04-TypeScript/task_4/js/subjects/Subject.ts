@@ -1,6 +1,8 @@
-namespace Subjects {
-  export interface Subject {
-    teacher: Teacher;
-    setTeacher(teacher: Teacher): void;
-  }
+// task_3/js/interface.ts
+export type RowID = number;
+
+export interface RowElement {
+  firstName: string;
+  lastName: string;
+  age?: number;
 }
