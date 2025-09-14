@@ -1,13 +1,17 @@
-// Define MajorCredits interface with branding
+// task_5/js/main.ts
+
+// Interface for MajorCredits
 export interface MajorCredits {
   credits: number;
-  _brand: "MajorCredits"; // brand property for nominal typing
+  // brand property to make this type nominal (unique)
+  __brand: 'major';
 }
 
-// Define MinorCredits interface with branding
+// Interface for MinorCredits
 export interface MinorCredits {
   credits: number;
-  _brand: "MinorCredits"; // brand property for nominal typing
+  // brand property to make this type nominal (unique)
+  __brand: 'minor';
 }
 
 // Function to sum MajorCredits
@@ -17,7 +21,7 @@ export function sumMajorCredits(
 ): MajorCredits {
   return {
     credits: subject1.credits + subject2.credits,
-    _brand: "MajorCredits",
+    __brand: 'major',
   };
 }
 
@@ -28,17 +32,6 @@ export function sumMinorCredits(
 ): MinorCredits {
   return {
     credits: subject1.credits + subject2.credits,
-    _brand: "MinorCredits",
+    __brand: 'minor',
   };
 }
-
-// Example usage
-const major1: MajorCredits = { credits: 3, _brand: "MajorCredits" };
-const major2: MajorCredits = { credits: 4, _brand: "MajorCredits" };
-const totalMajor = sumMajorCredits(major1, major2);
-console.log("Total Major Credits:", totalMajor);
-
-const minor1: MinorCredits = { credits: 2, _brand: "MinorCredits" };
-const minor2: MinorCredits = { credits: 1, _brand: "MinorCredits" };
-const totalMinor = sumMinorCredits(minor1, minor2);
-console.log("Total Minor Credits:", totalMinor);
